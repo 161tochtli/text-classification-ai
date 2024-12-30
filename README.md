@@ -84,7 +84,7 @@ batch_size: 32
 To classify text, use the following command:
 
 ```bash
-python tasks/data_classification.py --task sample_task
+python data_classification.py --task sample_task
 ```
 
 ### Options
