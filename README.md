@@ -5,7 +5,7 @@ Welcome to the **Text Classification AI** repository! This project provides an A
 ## Features
 - Flexible categorization based on customizable configurations.
 - Works with any dataset containing text data.
-- Uses pre-defined or user-defined categories for classification.
+- User-defined categories for classification.
 - Supports one-hot or categorical output encoding.
 
 ---
