@@ -149,7 +149,7 @@ async def process_in_batches(tasks, batch_size=100):
 
 
 def load_task_configuration(task_name):
-    with open(work_dir+f"llm_tasks/{task_name}/task_configuration.yaml", "r") as f:
+    with open(work_dir+f"tasks/{task_name}/task_configuration.yaml", "r") as f:
         return yaml.safe_load(f)
 
 
@@ -179,8 +179,8 @@ def main(task_config):
     processed_df = asyncio.run(
         process_dataframe_with_openai_async(
             dataframe=df,
-            system_template= work_dir + f"llm_tasks/{task_config.get('task')}/system_prompt.txt",
-            user_template= work_dir + f"llm_tasks/{task_config.get('task')}/user_prompt.txt",
+            system_template= work_dir + f"tasks/{task_config.get('task')}/system_prompt.txt",
+            user_template= work_dir + f"tasks/{task_config.get('task')}/user_prompt.txt",
             param_cols=param_cols,
             fixed_params=fixed_params,
             categories=task_config.get("fixed_params").get("categories",[]),

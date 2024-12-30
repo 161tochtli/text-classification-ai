@@ -1,0 +1,44 @@
+# Task configuration
+
+# Path to the input file
+# This is the dataset or file that the script will process.
+# Replace with the actual path to your input file.
+input_file: data/input_file.csv
+
+# Path to the output file
+# The processed results will be saved to this file.
+# Replace with the desired path for your output file.
+output_file: data/output_file.csv
+
+# Parameter columns
+# List of column names that contain parameters to be processed.
+# These columns will be extracted from the input file or dataset.
+# Add or modify column names as required.
+param_cols:
+  - comentario
+
+# Fixed parameters
+# Key-value pairs of parameters that are fixed and remain constant during processing.
+# These can be used for passing additional options or configuration to the processing function.
+fixed_params:
+  idioma: Español
+  categories:
+    - Positivo
+    - Negativo
+
+# Reprocess flag
+# Set to true if you want to force reprocessing, even if results already exist.
+# Set to false to skip processing if outputs are already generated.
+reprocess: false
+
+# Encoding
+one_hot_encoding: false
+
+# Model name
+# Replace with the specific OpenAI model name or identifier.
+model: gpt-4o-mini
+
+# Batch size
+# Number of rows to process in a single batch.
+# Adjust this value based on your system's memory and processing capabilities.
+batch_size: 32
